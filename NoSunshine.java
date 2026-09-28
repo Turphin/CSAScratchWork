@@ -1,4 +1,4 @@
-public class AintNoSunshine {
+public class NoSunshine {
    public static void main (String[] args) {
       String aintNo = "Ain't no sunshine when she's gone";
       String andThis = "And this house just ain't no home";
