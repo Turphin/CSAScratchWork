@@ -1,6 +1,18 @@
 public class tester {
    public static void main (String[] args) {
-      System.out.println(isPrime(13195));
+      int j = 8;
+      boolean prime = true;
+      for (int k = 2; k < j; k++) {
+         if (j % k == 0 && j != 2) {prime = false; break;}
+      }
+      if (true) {
+         if (true) {
+            System.out.println(prime);
+            System.out.println(j);
+            System.out.println("-----------------");
+         }
+      }
+
    }
    
    public static boolean isPrime (long n) {

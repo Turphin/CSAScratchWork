@@ -6,26 +6,28 @@ public class ProjectEuler {
       System.out.println("The answer to problem 3 is: " + problem3());
       System.out.println("The answer to problem 4 is: " + problem4());
       System.out.println("The answer to problem 5 is: " + problem5());
-   }
-   
-   public static boolean isPrime (long n) {
-      boolean result = true;
-      for (long i = 2; i < n; i++) {
-         if (n % i == 0) {result = false;}
-      }
-      return result;
+      System.out.println("The answer to problem 6 is: " + problem6());
+      System.out.println("The answer to problem 7 is: " + problem7());
+      System.out.println("The answer to problem 8 is: " + problem8());
+      System.out.println("The answer to problem 9 is: " + problem9());
+      System.out.println("The answer to problem 10 is: " + problem10());
    }
    
    public static long findLargestFactor (long n) {
       long result = 0;
-      boolean found = false;
       for (long i = 2; i < n; i++) {
          if (n % i == 0) {
             if (i > n/i) {result = i;} else {result = n/i;}
             break;
          }
       }
-      if (isPrime(result)) {return result;} else {result = findLargestFactor(result);}
+      
+      boolean prime = true;
+      for (long i = 2; i < result; i++) {
+         if (result % i == 0) {prime = false;}
+      }
+      
+      if (prime == true) {return result;} else {result = findLargestFactor(result);}
       return result;
    }
    
@@ -157,6 +159,68 @@ public class ProjectEuler {
             found = true;
          } else {i++;}
       }
+      
+      return result;
+   }
+   
+   public static long problem6 () {
+      long result = 0;
+      long sumSquare = 0;
+      long squareSum = 0;
+      
+      for (int i = 1; i <= 100; i++) {
+         sumSquare += (long)Math.pow(i,2);
+      }
+      
+      for (int i = 1; i <= 100; i++) {
+         squareSum += i;
+      }
+      squareSum = (long)Math.pow(squareSum, 2);
+      
+      result = Math.abs(sumSquare - squareSum);
+      return result;
+   }
+   
+   public static long problem7 () {
+      long result = 0;
+      
+      int i = 1;
+      int j = 1;
+      while (i <= 10001) {
+         j++;
+         boolean prime = true;
+         for (int k = 2; k < j; k++) {
+            if (j % k == 0 && j != 2) {prime = false;}
+         }
+         if (prime == true) {
+            i++;
+         }
+      }
+      result = j;
+      
+      return result;
+   }
+   
+   public static long problem8 () {
+      long result = 0;
+      
+      
+      
+      return result;
+   }
+   
+   public static long problem9 () {
+      long result = 0;
+      
+      
+      
+      return result;
+   }
+   
+   public static long problem10 () {
+      long result = 0;
+      
+      
       
       return result;
    }
