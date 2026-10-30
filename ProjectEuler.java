@@ -18,7 +18,6 @@ public class ProjectEuler {
    
    public static long findLargestFactor (long n) {
       long result = 0;
-      boolean found = false;
       for (long i = 2; i < n; i++) {
          if (n % i == 0) {
             if (i > n/i) {result = i;} else {result = n/i;}
